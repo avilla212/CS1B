@@ -2,17 +2,17 @@
 // File: HW_1A.pdf
 // =============================================================================
 //
-// Programmer: Alexander Villafana
+// Programmer: Moe Mogasemi
 // Class: CS1B
 // Instructor: Med Mogasemi
 //
 // =============================================================================
-// Program: Commission Calculator
+// Program: Average Temperature Calculator
 // =============================================================================
 // Description:
-// This program calculates the commission and total pay based on the sales
-// amount provided by the user. It uses a tiered commission structure and
-// displays the results to the user.
+// This program calculates the average temperature of three cities based on
+// user input. It takes the temperatures, computes the average, and displays it
+// to the user.
 // =============================================================================
 
 #include <iostream>
