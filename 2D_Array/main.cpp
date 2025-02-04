@@ -38,6 +38,8 @@ int main(void){
     int rowMax = getHighestInRow(arr,0);
     cout << "\nHighest in row: " << rowMax;
 
+    printArr(arr);
+
     return 0;
 }
 
