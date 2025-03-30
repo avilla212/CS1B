@@ -1,8 +1,8 @@
 #include <iostream>
 
-using namespace std;
+struct Sidrouf {
+    bool theGoat;
+    bool primed;
 
-int main(void){
-
-    return 0;
+    
 }

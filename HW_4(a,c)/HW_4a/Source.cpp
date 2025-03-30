@@ -29,12 +29,7 @@ void appendUserInput(string fileName);
 // =============================================================================
 int main(void){
     
-    string fileName;
-    
-    cout << "Enter the name of the file to read: ";
-    cin >> fileName;
-
-    readTextFile(fileName);
+    readTextFile("data.txt");
 
     // append user input to results.txt
     cout << "Enter 3 more numbers: ";
@@ -111,6 +106,8 @@ void appendUserInput(string fileName){
         }
 
         outFile.close();
+
+        cout << "The numbers have been written (appended) to results.txt" << endl;
         
     } catch (exception e) {
         cout << "Error opening file" << endl;

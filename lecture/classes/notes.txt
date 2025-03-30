@@ -1,0 +1,62 @@
+Classes have data members and functions 
+    - Data memebers (instance variables) are often declared as private so only class functions can access them
+
+Member Functions - Functions defined in a class specification
+    - Member functions are the only way private data members can be accessed
+
+Access Specifiers - can be public and private
+    - These specify how class data members and class functions can be accessed
+
+Pros of Using classes
+    - Reusable code, private data members are protected since only memeber  functions can change the instance variables
+    - Data abstraction, which is only providing the essential information about the data to the outside world, hiding the background details of the implementation
+    - Abstracion, which support the creation of reusable code
+
+Encapsulation - the property of being a self-contained unit
+    - all details of a unit are grouped together
+    - details are hidden from the user
+    - the user only needs to know what functions to call which makes programming easier
+
+Student.h (specification file) and Student.cpp(would be the implementation file)
+
+We use set and get functions to access the private member variables
+- these are also called mutator functions
+
+A constructor constructs a  new object in memory when an object is instantiated (created)
+
+UML - Unified modeling language 
+    - provides a standard method for graphically depicting an object-oriented system
+
+UML diagrams - provides a set of standard diagrams for depicting OO sysetms
+
+Class diagram shows 3 things
+    - Class name, attributes, operations
+    - "-" means private, "#" means protected, "+" means public
+
+Copy constructor - A copy constructor is a special constructor that creates a new object from an existing object 
+    - If you do not define one, the complier  will generate a shallow copy for you
+    
+    - Person p1("Alex", 25)
+    - Person p2 = p1; 
+        - A constructor for person 2 is not called, instead, the default copy constructor is called, which is a shallow copy, thus, a seperate section of memory is not allocated for p2
+        - both objects name members point to kathy jones but only p1 has its own pointers, but p2 has only a copy of p1's
+    - Solution
+        - Create a copy constructor, same form as a regular constructor but a reference parameter of the same class is passed in
+
+
+// Example
+
+
+class Student:
+    private: 
+    string name; 
+    int id;
+    double gpa;
+
+    public:
+    // Constructor
+    Student() : name(""), id(0), gpa(0.00)
+
+    Sudent(name, id, gpa) : name(name), id(id), gpa(gpa)
+
+    void getName() { return this->name}

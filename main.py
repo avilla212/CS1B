@@ -1,25 +1,39 @@
-# Merge two arrays 
+class Student:
+    # Default constructor
+    def __init__(self):
+        self.name = "John"
+        self.age = 20
+        self.next = None
 
-arr1 = [1,3,55,67,3,2]
-arr2 = [1,5,11,2,44,5]
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+        self.next = None
 
-# Merge two arrays using pointers
-def mergeArrays(arr1, arr2):
-    i: int = 0
-    j: int = 0
-    merged = [0] * (len(arr1) + len(arr2))
-    # merge one value at a time
-    # first from arr1 then from arr2
-    # repeat until all values are merged
-    while i < len(arr1) and j < len(arr2):
-        merged[i] = arr1[i]
-        merged[j+1] = arr2[j]
-        i += 1
-        j += 1
+class StudentList:
+    def __init__(self):
+        self.head = Student()
+        self.tail = self.head
+        
+    
+    def add(self, name, age):
+        try:
+            newStudent = Student(name, age)
+            self.tail.next = newStudent
+            self.tail = newStudent
+        except:
+            print("Error: Cannot add new student")
 
-       
+    def display(self):
+        current = self.head
+        while current != None:
+            print(current.name, current.age)
+            current = current.next
 
-    return merged
+if __name__ == "__main__":
+    studentList = StudentList()
+    studentList.add("Alice", 21)
+    studentList.add("Bob", 22)
+    studentList.display()
 
-print(mergeArrays(arr1, arr2))
-
+    
